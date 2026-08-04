@@ -26,4 +26,4 @@ app.get("/", (req, res) => res.send("API working fine"));
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 
-app.listen(port, () => console.log(`Server started on port: ${PORT}`));
+app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
