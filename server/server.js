@@ -12,7 +12,10 @@ const PORT = process.env.PORT || 4000;
 
 connectDB();
 
-const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://mern-auth-system-frontend-three.vercel.app/",
+];
 
 app.use(express.json());
 app.use(cookieParser());
@@ -23,4 +26,4 @@ app.get("/", (req, res) => res.send("API working fine"));
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 
-app.listen(port, () => console.log(`Server started on port: ${port}`));
+app.listen(port, () => console.log(`Server started on port: ${PORT}`));
