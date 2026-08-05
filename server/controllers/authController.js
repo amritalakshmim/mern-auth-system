@@ -64,7 +64,7 @@ export const login = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    returnres.json({
+    return res.json({
       success: false,
       message: "Email and password are required!",
     });
